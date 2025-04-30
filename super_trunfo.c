@@ -9,6 +9,7 @@
     int populacao, populacao2;
     float area, pib, area2, pib2;
     int ponto_turistico, ponto_turistico2;
+    float densidade1, per_capita1, densidade2, per_capita2;
     
     // Começar a interação com usuários da carta 01 
     printf("BEM VINDOS AO SUPER TRUNFO \n");
@@ -40,6 +41,9 @@
     // Perguntando quantos pontos turisticos há naquela região
     printf("Há quantos pontos turisticos em %s? \n" ,nome_cidade);  
     scanf("%d" ,&ponto_turistico);
+
+    densidade1 = populacao/area;
+    per_capita1 = pib/populacao;
     
     // Mostrando o Resultado da carta 
     printf("CARTA 1:\n");
@@ -50,9 +54,13 @@
     printf("Área: %f km²\n" ,area);
     printf("PIB: %f bilhões de reais\n" ,pib);
     printf("Número de Pontos Turisticos: %d\n" ,ponto_turistico);
+    printf("A densidade é igual a: %f hab/km² \n" ,densidade1);
+    printf("O PIB per capita é igual a: %f reais \n" ,per_capita1);
 
-    
+
     // Começar a interação com usuários da carta 02
+    printf("---------------------------------------------------\n");
+    printf("Agora vamos para a carta dois: \n");
     printf("Cara 02 do JOGO\n");
 
     // Perguntando qual o estado do cliente
@@ -82,6 +90,9 @@
     // Perguntando quantos pontos turisticos há naquela região
     printf("Há quantos pontos turisticos em %s? \n" ,nome_cidade);  
     scanf("%d" ,&ponto_turistico2);
+
+    densidade2 = populacao2/area2;
+    per_capita2 = pib2/populacao2;
     
     // Mostrando o Resultado da carta 
     printf("CARTA 2:\n");
@@ -92,6 +103,8 @@
     printf("Área: %f km²\n" ,area2);
     printf("PIB: %f bilhões de reais\n" ,pib2);
     printf("Número de Pontos Turisticos: %d\n" ,ponto_turistico2);
+    printf("A densidade é igual a: %f hab/km² \n" ,densidade2);
+    printf("O PIB per capita é igual a: %f reais \n" ,per_capita2);
     
     return 0;
 }
